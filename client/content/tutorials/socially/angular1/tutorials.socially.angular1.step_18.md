@@ -154,30 +154,34 @@ Make `partyDetails.less` to look like this:
 
 {{> DiffBox tutorialName="meteor-angular1-socially" step="18.31"}}
 
+# Modal window for PartyAdd
 
-# Custom Authentication Components
+It would be great to move PartyAdd outside PartiesList. It would be even greater to make modal window for it.
 
-Our next step will replace the login-buttons which is a simple and non-styled login/register component - we will add our custom authentication component with custom style.
-
-First, let's create `Auth` component:
+We need to create some sort of modal window trigger:
 
 {{> DiffBox tutorialName="meteor-angular1-socially" step="18.32"}}
 
 {{> DiffBox tutorialName="meteor-angular1-socially" step="18.33"}}
 
-As you can see, we're going to create components for few new states.
+What we did there?
 
-First state is a page with `Login` component.
-
-In this component we use Meteor's accounts, and use the Accounts API to login our user with email and password.
+* We used [$mdDialog](https://material.angularjs.org/latest/api/service/$mdDialog) to open a new dialog window.
+* We used [$mdMedia](https://material.angularjs.org/latest/api/service/$mdMedia) to check if window has to be opened in fullscreen mode (on small screens it look much better).
+* We defined a view *partyAddModal.html* which we will create in the next step.
 
 {{> DiffBox tutorialName="meteor-angular1-socially" step="18.34"}}
 
+
 {{> DiffBox tutorialName="meteor-angular1-socially" step="18.35"}}
+As you can see we used `done` directive on `PartyAdd` component and for now it does nothing.
+
+It would be an expression binding which invokes after a new party has been added.
 
 {{> DiffBox tutorialName="meteor-angular1-socially" step="18.36"}}
 
-In `Register` component we use Meteor's accounts, and use the Accounts API to add a new user.
+Great! Our new component is now working and cooperating with PartyAdd component.
+Let's implement it into `PartiesList`:
 
 {{> DiffBox tutorialName="meteor-angular1-socially" step="18.37"}}
 
@@ -185,19 +189,51 @@ In `Register` component we use Meteor's accounts, and use the Accounts API to ad
 
 {{> DiffBox tutorialName="meteor-angular1-socially" step="18.39"}}
 
-We also have "Recover" button in the login page, so let's create a component that handles that, and call it `Password`:
+Now try to click on a button displayed in the right bottom corner of the screen. You should see opened modal window with PartyAdd component!
+
+# Custom Authentication Components
+
+Our next step will replace the login-buttons which is a simple and non-styled login/register component - we will add our custom authentication component with custom style.
+
+First, let's create `Auth` component:
 
 {{> DiffBox tutorialName="meteor-angular1-socially" step="18.40"}}
 
 {{> DiffBox tutorialName="meteor-angular1-socially" step="18.41"}}
 
-{{> DiffBox tutorialName="meteor-angular1-socially" step="18.42"}}
+As you can see, we're going to create components for few new states.
 
-Since every component is ready, we can now implement Auth into Socially:
+First state is a page with `Login` component.
+
+In this component we use Meteor's accounts, and use the Accounts API to login our user with email and password.
+
+{{> DiffBox tutorialName="meteor-angular1-socially" step="18.42"}}
 
 {{> DiffBox tutorialName="meteor-angular1-socially" step="18.43"}}
 
 {{> DiffBox tutorialName="meteor-angular1-socially" step="18.44"}}
+
+In `Register` component we use Meteor's accounts, and use the Accounts API to add a new user.
+
+{{> DiffBox tutorialName="meteor-angular1-socially" step="18.45"}}
+
+{{> DiffBox tutorialName="meteor-angular1-socially" step="18.46"}}
+
+{{> DiffBox tutorialName="meteor-angular1-socially" step="18.47"}}
+
+We also have "Recover" button in the login page, so let's create a component that handles that, and call it `Password`:
+
+{{> DiffBox tutorialName="meteor-angular1-socially" step="18.48"}}
+
+{{> DiffBox tutorialName="meteor-angular1-socially" step="18.49"}}
+
+{{> DiffBox tutorialName="meteor-angular1-socially" step="18.50"}}
+
+Since every component is ready, we can now implement Auth into Socially:
+
+{{> DiffBox tutorialName="meteor-angular1-socially" step="18.51"}}
+
+{{> DiffBox tutorialName="meteor-angular1-socially" step="18.52"}}
 
 Inside the `md-toolbar` you see we used
 
@@ -207,7 +243,7 @@ element which is actually a separator blank element which is used to fill all th
 
 We can now remove `navigation.less`, which we don't need any longer:
 
-{{> DiffBox tutorialName="meteor-angular1-socially" step="18.46"}}
+{{> DiffBox tutorialName="meteor-angular1-socially" step="18.54"}}
 
 That's it! we just implemented our own authentication components using Meteor's Accounts API and angular-material!
 
