@@ -50,7 +50,6 @@ There is one more required step in Angular 2 to load a component. The `Socially`
 Here's a good example how to import and link custom components together:
 
 - import the component class you want to use
-- we add it to the list of directives to use in the `View` annotation
 
 As soon as it's done, the imported component's directive becomes available in the template.
 
