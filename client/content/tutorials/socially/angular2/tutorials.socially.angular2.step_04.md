@@ -18,7 +18,7 @@ In Angular 2, we build a tree of components with the root `Socially` component a
 child components stemming out of it down to the leaves. This is one of the principal
 architectural differences between Angular 1 & 2.
 
-Let's make a new component called `PartiesForm`, and put it inside it's own directory ("client/parties-form").
+Let's make a new component called `PartiesForm`, and put it inside it's own directory ("client/imports/parties-form").
 
 {{> DiffBox tutorialName="meteor-angular2-socially" step="4.1"}}
 
@@ -27,7 +27,7 @@ By doing so, we tell TypeScript to create a System.js module with the file conte
 
 As a result, you'll be able to import `PartiesForm` in any other component as follows:
 
-    import {PartiesForm} from 'client/parties-form/parties-form';
+    import {PartiesForm} from 'client/imports/parties-form/parties-form';
 
 By exporting and importing different modules, you create a modular structure of your app in ES6,
 which is similar to the modules in other script languages like Python.
@@ -35,7 +35,7 @@ This is what makes programming in ES6 really awesome since application structure
 
 Let's add a template for the new component.
 
-Add a file `parties-form/parties-form.html` with the following form:
+Add a file `imports/parties-form/parties-form.html` with the following form:
 
 {{> DiffBox tutorialName="meteor-angular2-socially" step="4.2"}}
 
