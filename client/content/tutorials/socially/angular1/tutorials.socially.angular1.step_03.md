@@ -27,7 +27,7 @@ Thanks to minimongo, Meteor's client-side Mongo emulator, `Mongo.Collection` can
 
 So first, let's define the parties collection that will store all our parties.
 
-Create new file, like this:
+Create a new file, like this:
 
 {{> DiffBox tutorialName="meteor-angular1-socially" step="3.1"}}
 
