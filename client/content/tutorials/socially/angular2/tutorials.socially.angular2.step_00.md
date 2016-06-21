@@ -93,7 +93,7 @@ To avoid importing `reflect-metatada` and `zone.js` (more about it [here](https:
 
 You also may consider running:
     $ meteor npm install --save angular2-meteor-polyfills
-(actually, in several cases, we notice an error if the install is not done manually "Error: Cannot find module 'angular2-meteor-polyfills/browser'")
+(actually, in several cases, we noticed an error if the install is not done manually "Error: Cannot find module 'angular2-meteor-polyfills/browser'")
 
 Also run:
 
