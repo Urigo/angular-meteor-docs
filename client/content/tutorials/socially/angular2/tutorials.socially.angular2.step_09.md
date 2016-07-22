@@ -161,10 +161,6 @@ means at the moment the template is being rendered it's also undefined.
 The Angular 2 rendering engine doesn't check availability of template variables while rendering,
 as opposed to how templates are rendered in Blaze.
 
-We can add an `ngIf` directive to conditionally display the form when the party data is available:
-
-{{> DiffBox tutorialName="meteor-angular2-socially" step="9.10"}}
-
 Run the app and click on one of the party links. You'll see that the party details page loads with full data as before.
 
 # Search
