@@ -136,6 +136,7 @@ And let's continue defining our Angular 1 application module. Give it the name `
 
 As you can see, we imported two modules, `angular` and `angular-meteor`.
 Since the second one exports the name of angular module it easier to add it as a dependency.
+Also you should import here `./main.html` template.
 
 And use the same application name in the `ng-app` directive in `index.html`:
 
