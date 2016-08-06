@@ -13,7 +13,7 @@ Let's change our template to be dynamic:
 
 {{> DiffBox tutorialName="meteor-angular2-socially" step="2.1"}}
 
-We replaced the hard-coded party list with the [NgFor](https://angular.io/docs/js/latest/api/directives/NgFor-class.html) directive and two Angular expressions:
+We replaced the hard-coded party list with the [NgFor](https://angular.io/docs/ts/latest/guide/displaying-data.html) directive and two Angular expressions:
 
 - The `*ngFor="let party of parties"` attribute in the `li` tag is an Angular repeater directive. The repeater tells Angular to create a `li` element for each party in the list using the `li` tag as the template.
 - The expressions wrapped in the double curly braces ( `{{dstache}}party.name}}` and `{{dstache}}party.description}}` ) will be replaced by the value of the expressions.
