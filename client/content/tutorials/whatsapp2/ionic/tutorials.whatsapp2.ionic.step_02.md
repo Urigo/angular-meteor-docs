@@ -107,7 +107,7 @@ The current view template contains an &lt;ion-header&gt; with a navigation bar c
 
 As for now the chat items in our view contain a date of the recent message sent with a very messy and unclear format. Let's use a more user friendly format called a 'calendaric format'. For this we gonna need a help of a package called `angular2-moment`:
 
-    $ npm install angular2-moment --save
+    $ npm install angular2-moment@0.8.2 --save
 
 Now that it is installed, before we go ahead and use a calendar pipe in our view, we first need to provide it in our component:
 
