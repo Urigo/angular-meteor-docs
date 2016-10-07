@@ -5,7 +5,6 @@ In this section we'll look at how to:
 
 - implement security for an app using Meteor and Angular 2 API
 - setup user accounts in meteor using a login and password
-- setup OAuth login for Facebook & Twitter
 - restrict access to views based on user permissions
 
 # Removing Insecure
