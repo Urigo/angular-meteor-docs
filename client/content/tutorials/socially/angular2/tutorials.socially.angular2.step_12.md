@@ -150,6 +150,41 @@ At this moment, we have almost everything in place. Let's check if everything is
 We are going to have to add a lot of parties, at least, a couple of pages.
 But, since we've chosen quite a large default page size (10), it would be tedious to add all parties manually.
 
+### Generating Mock Data
+
+In this example, we need to deal with multiple objects and in order to test it and get the best results - we need a lot of Parties objects.
+
+Thankfully, we have a helpful package called [_anti:fake_](https://atmospherejs.com/anti/fake), which will help us out with the generation of names, locations and other properties of new fake parties.
+
+    $ meteor add anti:fake
+
+So, with the following lines of code we are going to have 30 parties in total
+(given that we already have three):
+
+__`server/imports/fixtures/parties.ts`__:
+
+    ...
+
+    for (var i = 0; i < 27; i++) {
+      Parties.insert({
+        name: Fake.sentence(50),
+        location: Fake.sentence(10),
+        description: Fake.sentence(100),
+        public: true
+      });
+    }
+
+
+Fake is loaded in Meteor as a global, you may want to declare it for TypeScript.
+
+__`typings/fake.d.ts`__:
+
+    declare var Fake: {
+        sentence(words: number): string;
+    }
+
+Now reset the database (`meteor reset`) and run the app. You should see a list of 10 parties shown initially and 3 pages links just at the bottom.
+
 # Getting the Total Number of Parties
 
 The pagination component needs to know how many pages it will create. As such, we need to know the total number of parties in storage and divide it by the number of items per page.
@@ -245,51 +280,12 @@ then try to remove one of the found parties and, finally, search with an empty l
 
 Although this sequence of actions looks quite complicated, it was accomplished with rather few lines of code.
 
-### Generating Mock Data
-
-In this example, we need to deal with multiple objects and in order to test it and get the best results - we need a lot of Parties objects.
-
-Thankfully, we have a helpful package called [_anti:fake_](https://atmospherejs.com/anti/fake), which will help us out with the generation of names, locations and other properties of new fake parties.
-
-    $ meteor add anti:fake
-
-So, with the following lines of code we are going to have 30 parties in total
-(given that we already have three):
-
-__`server/imports/fixtures/parties.ts`__:
-
-    ...
-
-    for (var i = 0; i < 27; i++) {
-      Parties.insert({
-        name: Fake.sentence(50),
-        location: Fake.sentence(10),
-        description: Fake.sentence(100),
-        public: true
-      });
-    }
-
-
-Fake is loaded in Meteor as a global, you may want to declare it for TypeScript.
-
-__`typings/fake.d.ts`__:
-
-    declare var Fake: {
-        sentence(words: number): string;
-    }
-
-Now reset the database (`meteor reset`) and run the app. You should see a list of 10 parties shown initially and 3 pages links just at the bottom.
-
-Play around with the pagination: click on page links to go back and forth,
-then try to delete parties to check if the current page updates properly.
-
 # Summary
 
 This step covered a lot. We looked at:
 
 - Mongo query sort options: `sort`, `limit`, `skip`
 - RxJS `Subject` for updating variables automatically
-- Angular 2 pipes to filter data
 - Handling onChange events in Angular 2
 - Generating fake data with `anti:fake`
 - Establishing the total number of results with `tmeasday:publish-counts`
