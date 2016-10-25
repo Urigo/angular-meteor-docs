@@ -33,6 +33,8 @@ the Model-Driven binding where the `FormGroup` instance is used.
 
 The syntax looks a bit different, using both square and rounded brackets: `[(ngModel)]`. `ngModel` binds to the party properties and fills out the inputs, and vice versa.
 
+We added an `ngIf` directive to conditionally display the form when the party data is available.
+
 Let's do a little test to see how form controls and events work in Angular 2. Start by binding to `party.name` below the input, then experiment by changing the input's text.
 
     <label for="name">Name</label>
