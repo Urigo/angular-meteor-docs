@@ -55,19 +55,19 @@ We still need to add uiView directive, Socially is the best place for it:
 
 Let's define a default route and use html5 mode to make urls look a lot fancier:
 
-{{> DiffBox tutorialName="meteor-angular1-socially" step="5.6"}}
+{{> DiffBox tutorialName="meteor-angular1-socially" step="5.5"}}
 
 It would be nice to have a navigation. Create one! Let's call our new component `Navigation`:
 
-{{> DiffBox tutorialName="meteor-angular1-socially" step="5.7"}}
+{{> DiffBox tutorialName="meteor-angular1-socially" step="5.6"}}
 
-{{> DiffBox tutorialName="meteor-angular1-socially" step="5.8"}}
+{{> DiffBox tutorialName="meteor-angular1-socially" step="5.7"}}
 
 And implement it in `Socially`:
 
-{{> DiffBox tutorialName="meteor-angular1-socially" step="5.9"}}
+{{> DiffBox tutorialName="meteor-angular1-socially" step="5.8"}}
 
-{{> DiffBox tutorialName="meteor-angular1-socially" step="5.10"}}
+{{> DiffBox tutorialName="meteor-angular1-socially" step="5.9"}}
 
 Notice we did 3 things:
 
@@ -83,7 +83,7 @@ Notice we did 3 things:
 Now let's configure our routes.
 There are no states at this stage, so let's add `parties` inside `PartiesList` component:
 
-{{> DiffBox tutorialName="meteor-angular1-socially" step="5.5"}}
+{{> DiffBox tutorialName="meteor-angular1-socially" step="5.10"}}
 
 And we will also add a state for a new page that will display the party details.
 
