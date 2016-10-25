@@ -48,7 +48,7 @@ Now we need to take care of the message's timestamp and format it, then again we
 
 {{> DiffBox tutorialName="whatsapp2-ionic-tutorial" step="4.10"}}
 
-> *Note*: The current pipe can be provided with the layout we're intrested in, therefore we provided it with the `HH:MM` parameter ('H' stands for 'hour' and 'M' stands for 'minute'). More information about date formats can be found in [`Moment`'s official website](momentjs.com).
+> *Note*: The current pipe can be provided with the layout we're intrested in, therefore we provided it with the `HH:mm` parameter ('H' stands for 'hour' and 'm' stands for 'minute'). More information about date formats can be found in [`Moment`'s official website](momentjs.com).
 
 Our messages are set, but there is one really important feature missing and that's sending messages. Let's implement our message editor.
 
