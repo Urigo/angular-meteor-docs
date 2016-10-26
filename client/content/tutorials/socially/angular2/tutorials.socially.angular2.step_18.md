@@ -1,9 +1,9 @@
 {{#template name="tutorials.socially.angular2.step_18.md"}}
 {{> downloadPreviousStep stepName="step_17"}}
 
-In this chapter we will add angular2-material to our project, and update some style and layout in the project.
+In this chapter we will add @angular/material to our project, and update some style and layout in the project.
 
-Angular2-material documentation of each component can be found [here](https://github.com/angular/material2/tree/master/src/components).
+Angular material documentation of each component can be found [here](https://github.com/angular/material2/tree/master/src/lib).
 
 # Removing Bootstrap 4
 
@@ -15,23 +15,13 @@ And let's remove the import from the `main.sass` file:
 
 {{> DiffBox tutorialName="meteor-angular2-socially" step="19.2"}}
 
-# Adding angular2-material
+# Adding @angular/material
 
-Now we need to add angular2-material to our project - so let's do that.
+Now we need to add @angular/material to our project - so let's do that.
 
 Run the following command in your Terminal:
 
-    $ meteor npm install @angular2-material/core @angular2-material/button @angular2-material/card @angular2-material/checkbox @angular2-material/input @angular2-material/list @angular2-material/toolbar --save
-
-We installed:
-
-- core package
-- button
-- card
-- checkbox
-- input
-- toolbar
-- list
+    $ meteor npm install @angular/material --save
 
 Now let's load the modules into our `NgModule`:
 
@@ -39,7 +29,7 @@ Now let's load the modules into our `NgModule`:
 
 Like we did in the previous chapter - let's take care of the navigation bar first.
 
-We use directives and components from Angular2-Material - such as `md-toolbar`.
+We use directives and components from Angular Material - such as `md-toolbar`.
 
 Let's use it in the main component's template:
 
@@ -165,7 +155,7 @@ And add the `/reset` route:
 
 {{> DiffBox tutorialName="meteor-angular2-socially" step="19.25"}}
 
-That's it! we just implemented our own authentication components using Meteor's Accounts API and Angular2-Material!
+That's it! we just implemented our own authentication components using Meteor's Accounts API and Angular Material!
 
 > Note that the recovery email won't be sent to the actual email address, since you need to configure `email` package to work with your email provider. you can read more about it [here](https://docs.meteor.com/api/email.html).
 
@@ -185,11 +175,11 @@ And let's add another CSS class missing:
 
 {{> DiffBox tutorialName="meteor-angular2-socially" step="19.28"}}
 
-> The import of this CSS file is temporary, and we will need to use it only because `angular2-material` is still in beta and not implemented all the features.
+> The import of this CSS file is temporary, and we will need to use it only because `@angular/material` is still in alpha and not implemented all the features.
 
 # Summary
 
-In this chapter we replaced Boostrap4 with Angular2-Material, and updated all the view and layout to match the component we got from it.
+In this chapter we replaced Boostrap4 with Angular Material, and updated all the view and layout to match the component we got from it.
 
 We also learnt how to use Meteor's Accounts API and how to implement authentication view and components, and how to connect them to our app.
 
