@@ -47,13 +47,13 @@ Since we're using modules, let's take care of `Parties` collection:
 
 {{> DiffBox tutorialName="meteor-angular1-socially" step="4.8"}}
 
-{{> DiffBox tutorialName="meteor-angular1-socially" step="4.10"}}
+{{> DiffBox tutorialName="meteor-angular1-socially" step="4.9"}}
 
 Then, we remove all contents from `collections/parties.js`
 
-{{> DiffBox tutorialName="meteor-angular1-socially" step="4.11"}}
+{{> DiffBox tutorialName="meteor-angular1-socially" step="4.10"}}
 
-{{> DiffBox tutorialName="meteor-angular1-socially" step="4.12"}}
+{{> DiffBox tutorialName="meteor-angular1-socially" step="4.11"}}
 
 > Parties is a Mongo.Collection object, and the [insert method](http://docs.meteor.com/#/full/insert) inserts a new object to the collection and assign an id for the new object.
 
@@ -65,9 +65,9 @@ Now, let's add the ability to delete parties.
 
 First, we have to create a Component, let's call it `PartyRemove`!
 
-{{> DiffBox tutorialName="meteor-angular1-socially" step="4.13"}}
+{{> DiffBox tutorialName="meteor-angular1-socially" step="4.12"}}
 
-{{> DiffBox tutorialName="meteor-angular1-socially" step="4.14"}}
+{{> DiffBox tutorialName="meteor-angular1-socially" step="4.13"}}
 
 ## Bindings
 
@@ -188,18 +188,18 @@ Since you know how something about bindings we can continue our work!
 
 Use one-way binding since this is available in AngularJS 1.5:
 
-{{> DiffBox tutorialName="meteor-angular1-socially" step="4.15"}}
+{{> DiffBox tutorialName="meteor-angular1-socially" step="4.14"}}
 
 
 Now, we can add some logic to remove() method:
 
-{{> DiffBox tutorialName="meteor-angular1-socially" step="4.16"}}
+{{> DiffBox tutorialName="meteor-angular1-socially" step="4.15"}}
 
 It's not yet available in `PartiesList`:
 
-{{> DiffBox tutorialName="meteor-angular1-socially" step="4.17"}}
+{{> DiffBox tutorialName="meteor-angular1-socially" step="4.16"}}
 
-{{> DiffBox tutorialName="meteor-angular1-socially" step="4.18"}}
+{{> DiffBox tutorialName="meteor-angular1-socially" step="4.17"}}
 
 # Summary
 
@@ -222,14 +222,14 @@ We also have to use `angular-mocks`:
 
 Now, add a script to run unit-tests:
 
-{{> DiffBox tutorialName="meteor-angular1-socially" step="4.20"}}
+{{> DiffBox tutorialName="meteor-angular1-socially" step="4.18"}}
 
 Use this command to run tests:
 
     $ meteor npm run test:watch
 
-{{> DiffBox tutorialName="meteor-angular1-socially" step="4.22"}}
+{{> DiffBox tutorialName="meteor-angular1-socially" step="4.19"}}
 
-{{> DiffBox tutorialName="meteor-angular1-socially" step="4.23"}}
+{{> DiffBox tutorialName="meteor-angular1-socially" step="4.20"}}
 
 {{/template}}
