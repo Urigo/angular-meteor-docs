@@ -55,11 +55,11 @@ And we will also create the same logic for fetching the user's image:
 
 And we will add the usage of this filter in the chats list:
 
-{{> DiffBox tutorialName="whatsapp-meteor-tutorial" step="5.14"}}
+{{> DiffBox tutorialName="whatsapp-meteor-tutorial" step="5.15"}}
 
 And in the chat view:
 
-{{> DiffBox tutorialName="whatsapp-meteor-tutorial" step="5.15"}}
+{{> DiffBox tutorialName="whatsapp-meteor-tutorial" step="5.16"}}
 
 Now we want to get rid of the current data we have, which is just a static data.
 
@@ -69,7 +69,7 @@ So let's stop our `Meteor`'s server and reset the whole app by running:
 
 Let's add some users to the server instead of the old static data:
 
-{{> DiffBox tutorialName="whatsapp-meteor-tutorial" step="5.16"}}
+{{> DiffBox tutorialName="whatsapp-meteor-tutorial" step="5.17"}}
 
 Run it again, and this should be the result of the new Modal we created:
 
