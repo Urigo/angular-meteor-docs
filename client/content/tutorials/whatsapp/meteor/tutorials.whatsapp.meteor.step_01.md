@@ -47,6 +47,7 @@ We will also check for the current platform (browser or mobile) and initialize t
 Before we dive into building our app's different components, we need a way to write them using `es6`'s new class system. For this purpose we will use [angular-ecmascript](https://github.com/DAB0mB/angular-ecmascript) npm package. Let's install it:
 
     $ meteor npm install angular-ecmascript --save
+    $ meteor add ecmascript 
 
 `angular-ecmascript` is a utility library which will help us write an `AngularJS` app using es6's class system.
 As for now there is no official way to do so, however using es6 syntax is recommended, hence `angular-ecmascript` was created.
