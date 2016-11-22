@@ -90,7 +90,7 @@ Don't worry if you're not familiar with TypeScript. Valid ES6 or ES5 JavaScript 
 
 > If you'd like to deep dive into TypeScript, we recommend the [official tutorial](http://www.typescriptlang.org/Tutorial).
 
-TypeScript has it's own compiler, and it's own configuration file (called `tsconfig.json`) that needed to be configured in order to combine Angular 2 and Meteor.
+TypeScript has its own compiler, and its own configuration file (called `tsconfig.json`) that needed to be configured in order to combine Angular 2 and Meteor.
 
 Angular2-Meteor boilerplate contains a ready-to-use TypeScript configuration file (`tsconfig.json`), and if you want to learn more about Typescript compiler options, [click here](http://www.typescriptlang.org/docs/handbook/compiler-options.html).
 
@@ -100,17 +100,15 @@ We need to let Typescript know about all the types in the libraries we depend up
 
 In order to do that — thus adding full type-checking support at this stage — we'll use NPM packages that provides `d.ts` files, which are the TypeScript declaration files.
 
-This is a top level definition file, called `typings.d.ts` which imports all the other types declarations, and the `tsconfig.json` file imports this file.
+This is a top level definition file, called `typings.d.ts`, which imports all the other type declarations, and the `tsconfig.json` file imports this file.
 
-Those repositories called `@types`, and you might find some of them already in the Angular 2 boilerplate, and we will later add more `@types` and write some of our own.
+Those repositories called `@types`, and you might find some of them already in the Angular 2 boilerplate; we will later add more `@types` and write some of our own.
 
-For example, package like `chai` that not written in TypeScript, does not provide it's own `.d.ts` file, so we need to also install `@types/chai` from NPM in order to get TypeScript support for this package.
+For example, a package like `chai`, that is not written in TypeScript, does not provide its own `.d.ts` file, so we also need to install `@types/chai` from NPM in order to get TypeScript support for this package.
 
 # Root Component
 
-Angular 2 code is structured as a tree of components.
-
-Each component is a controller with an attached view.
+Angular 2 code is structured as a tree of components; each component is a controller with an attached view.
 
 Since it's a tree, there should be a root component and branch components
 that stem out of it. So let's create our root component.
@@ -119,13 +117,13 @@ Create a new `app.component.ts` file inside of the `client` folder.
 
 {{> DiffBox tutorialName="meteor-angular2-socially" step="1.3"}}
 
-First we're importing the dependency we needed from `@angular/core`.
+First we import the dependency we need from `@angular/core`.
 
-Notice, the Component's selector matches the `<app>` tag we will provide in `index.html` below, and the View template creates the view.
+Notice that the Component's selector matches the `<app>` tag we will provide in `index.html` below, and the View template creates the view.
 
-The class, AppComponent, inherits from `@Component` which is part of Angular 2.
+The class, AppComponent, inherits from `@Component`, which is part of Angular 2.
 
-We have defined the component, let's create the template:
+Now that we have defined the component, let's create the template:
 
 {{> DiffBox tutorialName="meteor-angular2-socially" step="1.4"}}
 
@@ -136,21 +134,21 @@ Now, we can use it inside of the component:
 **About templates**
 
 Thanks to `angular2-compilers` package, we can import any html file into TypeScript space as a module.
-"But what we get from that module?" You ask. The answer is simply, it's a string. `angular2-compilers` converts html file's contents into string.
+"But what do we get from that module?", you ask. The answer is simply: it's a string. `angular2-compilers` converts an html file's contents into a string.
 
-> Since a component doesn't exist without its template, **we recommend** you to use a ***template as a string*** method, instead of loading it asynchronously (`templateUrl`).
+> Since a component doesn't exist without its template, **we recommend** you use a ***template as a string*** method, instead of loading it asynchronously (`templateUrl`).
 
 > In our opinion, this is the best practice of creating components.
 
-Finally, we can `bootstrap` our component, thus, marking it as the root component.
+Finally, we can `bootstrap` our component, thus marking it as the root component.
 
-First thing to do is to add `<app/>` element to the `<body/>`:
+The first thing to do is to add an `<app/>` element to the `<body/>`:
 
 {{> DiffBox tutorialName="meteor-angular2-socially" step="1.6"}}
 
 Great! Now we have our root component, we will need to create NgModule.
 
-NgModule defines the Angular2 module - it's external modules that in use, declarations, providers, exports and defines the main component to bootstrap.
+NgModule defines the Angular2 module: the external modules it declares or requires via use, declarations, providers, exports and defines; it is the main component to bootstrap.
 
 You can read more about NgModule in [Angular 2 documentation](https://angular.io/docs/ts/latest/guide/ngmodule.html).
 
@@ -158,13 +156,13 @@ Let's create our NgModule:
 
 {{> DiffBox tutorialName="meteor-angular2-socially" step="1.7"}}
 
-> We will import `BrowserModule` which is the basic and internal Component we will use later in our view templates.
+> We will import `BrowserModule`, which is the basic and internal Component we will use later in our view templates.
 
-And let's declare our `AppComponent` and add it as root component that needed to be bootstraped:
+And let's declare our `AppComponent` and add it as a root component that needs to be bootstraped:
 
 {{> DiffBox tutorialName="meteor-angular2-socially" step="1.8"}}
 
-Now we need to create an entry point for project - we will create it directly under `client` directory, because we want this file to be loaded when Meteor starts our project.
+Now we need to create an entry point for the project - we will create it directly under `client` directory, because we want this file to be loaded when Meteor starts our project.
 
 The main entry file uses Angular 2 `bootstrapModule` with our new NgModule:
 
@@ -179,25 +177,25 @@ Now let's run the app:
 
 And we have our first Angular 2.0 Meteor app working!
 
-Let's go through some of the technologies we used till now:
+Let's go through some of the technologies we used so far:
 
 # npm
 
 Npm stands for Node Packages Manager, which manages your dependencies and external packages.
 
-Meteor supports NPM packages (starting from 1.3), and when we created our project - a file named `package.json` was created - this file contains the project's npm dependencies and some other metadata.
+Meteor supports NPM packages (starting from 1.3) and when we created our project - a file named `package.json` was created - this file contains the project's npm dependencies and some other metadata.
 
 To install the current project dependencies, type in the command line `npm install`.
 
-We also used Meteor packages (`meteor add ...`).  Meteor packages have some abilities that npm packages don't have yet so we will use some packages from there as well.
+We also used Meteor packages (`meteor add ...`).  Meteor packages have some abilities that npm packages don't have yet, so we will use some packages from there as well.
 
 ## ES6 Modules and CommonJS
 
 Meteor supports [ES6 modules](https://developer.mozilla.org/en/docs/web/javascript/reference/statements/import) out of the box.
 
-This feature provides the ability to use `import` / `export` statements and gives you a full control for modules loading and dependencies.
+This feature provides the ability to use `import` / `export` statements and gives you full control over module loading and dependencies.
 
-You can read more about how modules work and how it's based on CommonJS [on the Meteor docs](http://docs.meteor.com/#/full/modules).
+You can read more about how modules work and how they are based on CommonJS [on the Meteor docs](http://docs.meteor.com/#/full/modules).
 
 # Summary
 
