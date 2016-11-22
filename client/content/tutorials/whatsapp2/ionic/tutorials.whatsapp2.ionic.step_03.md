@@ -153,7 +153,7 @@ We can achieve this by calling `Messages.find` with proper selector and options.
 Let's go through each element of the `chats` property to call `Messages.find`.
 
 ```js
-const chatsWithMessages = chats.map(chat => Chats.find(/* selector, options*/));
+const chatsWithMessages = chats.map(chat => Messages.find(/* selector, options*/));
 ```
 
 That returns an array of Observables.
