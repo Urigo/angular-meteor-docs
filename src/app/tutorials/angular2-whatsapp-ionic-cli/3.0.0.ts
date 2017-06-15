@@ -1,10 +1,10 @@
 const markdownUrlBase = '/manuals/';
 
-export const V2_0_0 = {
+export const V3_0_0 = {
   isLatest: true,
-  urlName: '2.0.0',
+  urlName: '3.0.0',
   displayName: 'Socially Merge',
-  dateString: '01.02.2017',
+  dateString: '15.06.2017',
   steps: [
     {
       url: '/setup',
@@ -40,7 +40,7 @@ export const V2_0_0 = {
     },
     {
       url: '/authentication',
-      name: 'Authentication',
+      name: 'Users & Authentication',
       template: markdownUrlBase + 'templates/step7.md'
     },
     {
@@ -50,7 +50,7 @@ export const V2_0_0 = {
     },
     {
       url: '/privacy',
-      name: 'Privacy & Security',
+      name: 'Privacy & Subscriptions',
       template: markdownUrlBase + 'templates/step9.md'
     },
     {
@@ -58,25 +58,45 @@ export const V2_0_0 = {
       name: 'Filter & Pagination',
       template: markdownUrlBase + 'templates/step10.md'
     },
+    { 
+      url: '/android-testing',
+      name: 'Android testing',
+      template: markdownUrlBase + 'templates/step11.md'
+    },
     {
       url: '/google-maps',
-      name: 'Google Maps',
-      template: markdownUrlBase + 'templates/step11.md'
+      name: 'Google Maps & Geolocation',
+      template: markdownUrlBase + 'templates/step12.md'
     },
     {
       url: '/file-upload',
       name: 'File Upload & Images',
-      template: markdownUrlBase + 'templates/step12.md'
+      template: markdownUrlBase + 'templates/step13.md'
     },
     {
       url: '/native-mobile',
       name: 'Native Mobile',
-      template: markdownUrlBase + 'templates/step13.md'
+      template: markdownUrlBase + 'templates/step14.md'
+    },
+    { 
+      url: '/addressbook',
+      name: 'Addressbook integration',
+      template: markdownUrlBase + 'templates/step15.md'
+    },
+    { 
+      url: '/push-notifications',
+      name: 'FCM Push Notifications',
+      template: markdownUrlBase + 'templates/step16.md'
+    },
+    { 
+      url: '/facebook',
+      name: 'Facebook authentication',
+      template: markdownUrlBase + 'templates/step17.md'
     },
     {
       url: '/summary',
       name: 'Summary',
-      template: markdownUrlBase + 'templates/step14.md',
+      template: markdownUrlBase + 'templates/step18.md',
       hideCodeDiff: true
     }
   ]
